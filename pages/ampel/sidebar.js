@@ -1,1 +1,0 @@
-const sidebar = new Sidebar( 4 );
