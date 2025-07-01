@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinkercad Schaltkreis Tutorial</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Bauteil-Liste</h1>
+                <p>Nun werden die Bauteile vorgestellt, die du im Schaltkreis verwenden wirst.</p>
+            </div>
+        </div>
+
+        <!-- Arduino -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Arduino</h3>
+                <p class="check-description">
+                    Der Arduino ist ein kleiner Computer, den du programmieren kannst. Er hat sogenannte Pins – das sind
+                    Anschlüsse, an die du Kabel anschließen kannst.
+                    <br><br>
+                    <strong>GND</strong> steht für „Masse“ – hier fließt der Strom zurück. <strong>Pin 1</strong> (oder
+                    ein anderer Digitalpin) kann genutzt werden, um Strom zu einem Bauteil zu senden.
+                </p>
+            </div>
+            <img src="../../assets/tutorial/img_6.PNG" alt="Projekt erstellen" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        <!-- Steckbrett -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Steckbrett</h3>
+                <p class="check-description">
+                    Das Steckbrett hilft dir, Bauteile ohne Löten zu verbinden.
+                    Die Löcher in einer senkrechten Reihe (in der Mitte) sind **nicht** verbunden, aber die
+                    **horizontalen Reihen an den Seiten** schon – sie sind für Strom (+) und Masse (−) da.
+                    <br><br>
+                    <!-- Optionales Bild zur Struktur -->
+                    <em>Siehe Linien-Bild für die genaue Verbindung der Reihen.</em>
+                </p>
+            </div>
+            <img src="../../assets/tutorial/img_7.PNG" alt="Projekt erstellen" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        <!-- LED -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">LED</h3>
+                <p class="check-description">
+                    Eine LED ist eine kleine Lampe.
+                    <br><br>
+                    Wichtig: Eine LED darf nicht direkt an eine Stromquelle angeschlossen werden, sonst geht sie kaputt.
+                    Sie braucht einen <strong>Widerstand</strong>, um den Strom zu begrenzen.
+                </p>
+                <br><img src="../../assets/tutorial/img_8.PNG" alt="Projekt erstellen" class="tutorial-image" />
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Widerstand -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Widerstand</h3>
+                <p class="check-description">
+                    Ein Widerstand begrenzt den Strom, der durch ein Bauteil fließt.
+                    <br><br>
+                    Stell dir vor, er bremst den Strom ein bisschen. So schützt er empfindliche Bauteile – wie zum
+                    Beispiel die LED – vor zu viel Strom.
+                </p>
+                <br><img src="../../assets/tutorial/img_9.PNG" alt="Projekt erstellen" class="tutorial-image" />
+            </div>
+        </div>
+
+
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <!-- Checkbox-Interaktion -->
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+    <script src="../../sidebar.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+        sidebar.init(2); // Anpassen je nach Position im Tutorial
+    </script>
+
+</body>
+
+</html>

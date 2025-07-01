@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinkercad Schaltkreis Tutorial</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Schere, Stein, Papier</h1>
+                <p>In diesem Abschnitt bringen wir der Hand bei, „Schere, Stein, Papier“ zu spielen. Das Ziel ist, dass die Hand zufällig eine der drei Posen ausführt.</p>
+            </div>
+        </div>
+
+        <!-- Schritt 1: Arduino -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Setup</h3>
+                <p class="check-description">
+                    Erstelle zunächst eine <strong>start</strong>- und eine <strong>update</strong>-Funktion. In die <strong>update</strong>-Funktion fügst du eine neue <code>int</code>-Variable mit dem Namen <strong>random</strong> ein.
+                </p>
+            </div>
+            <img src="../../assets/hand/img_5.PNG" alt="Arduino-Setup" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        <!-- Schritt 2: Zufallszahl -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Zufallswert setzen</h3>
+                <p class="check-description">
+                    Weise der Variable <strong>random</strong> nun einen zufälligen Wert zwischen 1 und 3 zu.
+                </p>
+            </div>
+            <img src="../../assets/hand/img_6.PNG" alt="Zufallswert" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        <!-- Schritt 3: Bedingung -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Zahl prüfen</h3>
+                <p class="check-description">
+                    Verwende anschließend eine <strong>if</strong>-Bedingung, um zu prüfen, welche Zahl gewählt wurde.
+                </p>
+                <br><img src="../../assets/hand/img_7.PNG" alt="if-Abfrage" class="tutorial-image" />
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 4: Bewegung der Hand -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Handbewegung umsetzen</h3>
+                <p class="check-description">
+                    Ergänze nun innerhalb der jeweiligen <strong>if</strong>-Bedingungen den Code, der die passende Handbewegung für <strong>Schere</strong>, <strong>Stein</strong> und <strong>Papier</strong> ausführt.
+                </p>
+            </div>
+        </div>
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <!-- Checkbox-Interaktion -->
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+    <script src="../../sidebar.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+        sidebar.init(1); // Anpassen je nach Position im Tutorial
+    </script>
+
+</body>
+
+</html>

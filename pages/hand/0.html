@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinkercad Schaltkreis Tutorial</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Überblick</h1>
+                <p>In diesem Abschnitt erhältst du eine kurze Einführung in den Hand-Code-Editor.</p>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 1 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Editor öffnen</h3>
+                <p class="check-description">
+                    Falls du den Editor noch nicht geöffnet hast <a href="../../dist/index.html"><strong>Klicke hier</strong></a>.
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 2 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Benutzeroberfläche</h3>
+                <p class="check-description">
+                    Der Aufbau erinnert an Scratch – auf der rechten Seite findest du Blöcke, die du per Drag & Drop verwenden kannst.
+                </p>
+            </div>
+            <img src="../../assets/hand/img_1.PNG" alt="Benutzeroberfläche" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        <!-- Schritt 3 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Steuerung (Controls)</h3>
+                <p class="check-description">
+                    Unter "Controls" findest du die Blöcke <strong>start</strong> und <strong>update</strong>. Es darf jeweils nur einen dieser Blöcke geben.
+                    <br>– <strong>start</strong> wird einmalig beim Start ausgeführt.<br>
+                    – <strong>update</strong> wird fortlaufend wiederholt.<br>
+                    Außerdem gibt es einen Block zum Warten: <strong>warten _ Sekunden</strong>.
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 4 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Fingersteuerung</h3>
+                <p class="check-description">
+                    Im Tab „Finger“ findest du Blöcke zur Steuerung der Fingerrotation. Die Finger sind von 1 (Daumen) bis 5 (kleiner Finger) nummeriert.
+                </p>
+            </div>
+            <img src="../../assets/hand/img_2.PNG" alt="Fingersteuerung" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        <!-- Schritt 5 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Logik (Logic)</h3>
+                <p class="check-description">
+                    Im Bereich „Logic“ gibt es verschiedene Blöcke wie <strong>if</strong>-Bedingungen, Vergleichsblöcke sowie Elemente zur Darstellung von Zahlen und Texten.
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 6 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Schleifen (Loops)</h3>
+                <p class="check-description">
+                    Unter „Loops“ findest du: <br>
+                    – <strong>repeat times</strong>: Wiederholt den enthaltenen Code eine bestimmte Anzahl von Malen.<br>
+                    – <strong>repeat while</strong>: Führt Code aus, solange eine Bedingung erfüllt ist.<br>
+                    – <strong>break</strong>: Beendet die Schleife vorzeitig.
+                </p>
+            </div>
+        </div>
+        
+        <br>
+
+        <!-- Schritt 6 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Variablen (Variables)</h3>
+                <p class="check-description">
+                    Mit dem Block <strong>Create Variable</strong> kannst du eine neue Variable erstellen. Du gibst ihr einen Namen, und sie kann sich einen Wert merken – z. B. einen Wahrheitswert (<code>bool</code>), eine Zahl (<code>int</code>) oder einen Text (<code>str</code>).<br><br>
+                    Mit dem Block <strong>Set Variable</strong> kannst du den Wert einer Variable ändern. Mit dem Block, der nur den Namen der Variable zeigt, kannst du auf ihren aktuellen Wert zugreifen.<br><br>
+                    Hinweis: Jeder Variablenname darf nur einmal vergeben werden.
+                </p>
+            </div>
+            <img src="../../assets/hand/img_3.PNG" alt="Benutzeroberfläche" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        <!-- Schritt 7 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Funktionen (Functions)</h3>
+                <p class="check-description">
+                    Mit dem Block <strong>Function</strong> kannst du eigene Funktionen erstellen. Diese enthalten Code, der jedes Mal ausgeführt wird, wenn du die Funktion aufrufst.<br><br>
+                    Das ist besonders hilfreich, wenn du denselben Code mehrfach verwenden möchtest – du musst ihn dann nur einmal schreiben.<br><br>
+                    Sobald du eine Funktion erstellt hast, erscheint ein neuer Block, mit dem du sie aufrufen kannst.
+                </p>
+            </div>
+            <img src="../../assets/hand/img_4.PNG" alt="Benutzeroberfläche" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        
+        <div class="tutorial-content">
+            <h3>Wie es weitergeht:</h3>
+            <p>
+                Im nächsten Schritt werden die Bauteile, die du verwenden wirst, kurz vorgestellt.
+            </p>
+        </div>
+
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <!-- Checkbox-Interaktion -->
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+    <script src="../../sidebar.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+        sidebar.init(0); // Anpassen je nach Position im Tutorial
+    </script>
+
+</body>
+
+</html>
