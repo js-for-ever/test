@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Karte</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Bei Tinkercad anmelden</h1>
+                <p>Wenn du bereits bei Tinkercad angemeldet bist kannst du diesen Schritt überspringen.</p>
+            </div>
+            <div class="image-section">
+                <img src="../../assets/anmelden/img_0.webp" alt="Arduino Projekt" class="tutorial-image" />
+            </div>
+        </div>
+
+        <div class="tutorial-content">
+            <h3>Ohne E-Mail anmelden</h3>
+            <p>
+                Wenn du dich nicht mit deiner E-Mail anmelden möchtest oder einfach keine hast, kannst du auf der
+                folgenden Webseite eine temporäre Adresse erstellen:
+                <br>
+                <a href="https://temp-mail.org/" target="_blank">https://temp-mail.org/</a>
+                <br>
+                <br>
+                Kopiere einfach die generierte E-Mail-Adresse aus dem Feld. Danach kannst du dich ganz normal bei
+                Tinkercad anmelden:
+                <br>
+                <a href="https://www.tinkercad.com/" target="_blank">https://www.tinkercad.com/</a>
+                <br><br>
+                <strong>Wichtig:</strong> Schließe die Temp-Mail-Webseite nicht, solange du noch Zugriff auf die Adresse
+                brauchst. Denke außerdem daran, deine Projekte regelmäßig zu speichern!
+            </p>
+        </div>
+        <div style="height: 100px;"></div>
+
+    </div>
+
+
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+<script src="../../sidebar.js"></script>
+<script src="sidebar.js"></script>
+<script>
+    sidebar.init( 0 );
+</script>
+
+</body>
+
+</html>

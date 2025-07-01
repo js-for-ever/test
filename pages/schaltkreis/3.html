@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Karte</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Erstelle einen Schaltkreis</h1>
+                <p>In diesem Schritt lernst du, wie man eine LED-Lampe mithilfe eines Arduino mit Strom versorgt.</p>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 1 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Kabel mit Pin verbinden</h3>
+                <p class="check-description">
+                    Verbinde ein Kabel mit dem digitalen Pin 1 deines Arduino. Dieser Pin kann Spannung ausgeben, wenn du ihn im Code aktivierst.
+                    <br><br>
+                    Das andere Ende des Kabels steckst du in eine freie Reihe auf dem Steckbrett – so kommt der Strom zur Schaltung.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="../../assets/img_2.png" alt="Arduino Projekt" class="tutorial-image" width="500" />
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 2 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">LED einstecken</h3>
+                <p class="check-description">
+                    Stecke das lange Bein (Anode) deiner LED in die gleiche Reihe wie das Ende des Kabels.
+                    <br><br>
+                    Das lange Bein ist der Pluspol – hier fließt der Strom hinein.
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 3 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Widerstand einbauen</h3>
+                <p class="check-description">
+                    Verbinde ein Ende des Widerstands mit dem kurzen Bein (Kathode) der LED.
+                    <br><br>
+                    Das andere Ende des Widerstands kommt in eine Reihe, die später mit Masse (GND) verbunden wird.
+                    <br><br>
+                    Der Widerstand begrenzt den Strom, damit die LED nicht durchbrennt.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="../../assets/img_3.png" alt="Arduino Projekt" class="tutorial-image" width="500" />
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Schritt 4 -->
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Verbindung zur Masse herstellen</h3>
+                <p class="check-description">
+                    Verbinde ein Kabel mit dem GND-Pin deines Arduino (Ground/Masse).
+                    <br><br>
+                    Das andere Ende steckst du in die Minus-Reihe deines Steckbretts.
+                    <br><br>
+                    Damit schließt du den Stromkreis – der Strom kann jetzt vom Pluspol über die LED zurück zur Masse fließen.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="../../assets/img_4.png" alt="Arduino Projekt" class="tutorial-image" width="500" />
+            </div>
+        </div>
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+    <script src="../../sidebar.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+        sidebar.init(3);
+    </script>
+</body>
+
+</html>

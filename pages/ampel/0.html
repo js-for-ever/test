@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Karte</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Ampel mit LEDS</h1>
+                <p>
+                    
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="../../assets/img_14.png" alt="Arduino Projekt" class="tutorial-image" />
+            </div>
+        </div>
+
+        <div class="tutorial-content">
+            <h3>Was du bauen wirst</h3>
+            <p>Nun wirst du deine neu erworbenen Fähigkeiten anwenden, um einen Ampelschaltkreis zu entwerfen, zu
+                programmieren und anschließend zu bauen.</p>
+
+            <h3>Was du brauchst</h3>
+            <p>
+                1 × Arduino UNO<br>
+                3 × LED (rot, gelb, grün)<br>
+                3 × Widerstand<br>
+                4 × Jumper-Kabel<br>
+                1 × Steckbrett<br>
+            </p>
+        </div>
+        <div style="height: 100px;"></div>
+
+    </div>
+
+
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+<script src="../../sidebar.js"></script>
+<script src="sidebar.js"></script>
+<script>
+    sidebar.init( 0 );
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Karte</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Eine weitere LED hinzufügen</h1>
+                <p>In diesem Schritt lernst du, wie du eine zweite LED anschließt und beide LEDs abwechselnd blinken lässt.</p>
+            </div>
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Zweite LED anschließen</h3>
+                <p class="check-description">
+                    Verbinde eine zweite LED mit einem freien digitalen Pin am Arduino (zum Beispiel Pin 2 oder 3).<br><br>
+                    Vergiss nicht, auch hier einen Widerstand zwischen dem langen Bein (Pluspol) der LED und dem Pin zu setzen – so schützt du die LED vor zu viel Strom.<br><br>
+                    Rechts siehst du ein Beispiel für den Aufbau.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="../../assets/img_11.png" alt="Zweite LED mit Arduino" class="tutorial-image" width="500" />
+            </div>
+        </div>
+
+        <br>
+
+        <div class="tutorial-content">
+            <p>
+                <strong>Tipp:</strong> Notiere dir den Pin, den du für die zweite LED benutzt hast – du brauchst ihn gleich im Code!
+            </p>
+        </div>
+
+        <br>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">Warteblock einfügen</h3>
+                <p class="check-description">
+                    Gehe im Editor auf den Bereich <strong>"Steuerung"</strong> und finde den Block <strong>"warte ... Sekunden"</strong>.<br><br>
+                    Diesen brauchst du, um eine Pause zwischen dem Ein- und Ausschalten der LEDs zu machen.
+                </p>
+            </div>
+            <img src="../../assets/img_12.png" alt="Warteblock im Editor" class="tutorial-image" width="250" />
+        </div>
+
+        <br>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <div class="text-section">
+                <h3 class="check-title">LEDs abwechselnd blinken lassen</h3>
+                <p class="check-description">
+                    Verwende den Block <strong>"warte ... Sekunden"</strong> zusammen mit dem <strong>"Setze Pin auf HIGH/LOW"</strong>-Block.<br><br>
+                    So kannst du die erste LED einschalten, dann eine kurze Pause machen, sie ausschalten – und danach dasselbe mit der zweiten LED tun.<br><br>
+                    Rechts siehst du ein Beispiel für die Erste LED.
+                </p>
+            </div>
+            <img src="../../assets/img_13.png" alt="Blink-Code Beispiel" class="tutorial-image" />
+        </div>
+
+        <br>
+
+        <div class="tutorial-content">
+            <h3>Wie es weitergeht</h3>
+            <p>
+                Super, jetzt weißt du, wie man mehrere LEDs abwechselnd blinken lässt!<br><br>
+                Im nächsten Schritt bauen wir gemeinsam eine kleine Ampel – mit drei LEDs und realistischer Schaltung.
+            </p>
+            <br>
+            <img src="../../assets/img_14.png" alt="Ampel Vorschau" class="tutorial-image" height="150" />
+        </div>
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+    <script src="../../sidebar.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+        sidebar.init(5);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arduino Einstieg</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Dein Einstieg mit Arduino</h1>
+                <p>
+                    Willkommen zum ersten Projekt!<br>
+                    Du lernst, wie Strom in einem Schaltkreis funktioniert, wie man eine LED mit dem Arduino digital steuert – und wie du das Ganze am Ende mit echten Bauteilen selbst nachbaust.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="../../assets/img_1.png" alt="Arduino Projekt" class="tutorial-image" />
+            </div>
+        </div>
+
+        <div class="tutorial-content">
+            <h3>Was du machen wirst</h3>
+            <p>
+                Du erstellst zuerst einen Schaltkreis mit einer digitalen Simulation.<br>
+                Anschließend baust du die Schaltung mit echten Teilen nach und bringst zwei LEDs zum Blinken.
+            </p>
+
+            <h3>Was du brauchst</h3>
+            <p>
+                Für eine LED:
+                <br>• 1 × Arduino UNO
+                <br>• 1 × LED (z. B. rot)
+                <br>• 1 × Widerstand
+                <br>• 2 × Jumper-Kabel
+                <br>• 1 × Steckbrett
+                <br>• 1 × USB-Kabel zum Verbinden mit dem PC
+                <br><br>
+                Für zwei LEDs:
+                <br>• + 1 × weitere LED
+                <br>• + 1 × zusätzlicher Widerstand
+                <br>• + 1 × weitere Jumper-Kabel
+            </p>
+        </div>
+
+        <div class="tutorial-content" style="margin-top: 2rem;">
+            <h3>Sicherheit zuerst</h3>
+            <p>
+                Im späteren Teil wirst du echte Bauteile verwenden. <br>
+                <strong>Frage immer zuerst eine Lehrkraft, bevor du Strom anschließt!</strong><br>
+                So stellen wir sicher, dass alles richtig aufgebaut ist und keine Schäden entstehen.
+            </p>
+        </div>
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+    <script src="../../sidebar.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+        sidebar.init(0);
+    </script>
+
+</body>
+
+</html>

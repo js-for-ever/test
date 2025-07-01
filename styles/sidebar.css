@@ -1,0 +1,196 @@
+/* Globale Link-Stile (für Hauptinhalt) */
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+/* Spezielles Stil für Links in der Sidebar */
+.sidebar a {
+  color: white; /* Oder wie von dir gewünscht */
+  text-decoration: none;
+}
+
+.sidebar a:hover,
+.sidebar a:focus,
+.sidebar a:active {
+  color: white;
+  text-decoration: none;
+}
+/* Sicherstellen, dass <a> im step-item flex nutzt */
+.step-item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+/* Optional: Damit keine Zeilenumbrüche entstehen */
+.step-title,
+.step-status {
+  margin: 0;
+  white-space: nowrap;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #2d2d2d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100; 
+}
+
+.sidebar-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.step-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  color: white;
+  border-radius: 25px;
+}
+
+.step-item::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #bbb; /* Default circle color */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.step-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 20px;
+  color: white;
+}
+
+.step-status {
+  font-size: 0.9rem;
+  margin-left: auto;
+  color: white;
+}
+
+.step-item::before {
+  content: attr(data-step);
+  position: absolute;
+  left: -35px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #555;
+  border: 2px solid #fff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.step-item.completed::before {
+  content: '✓';
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  opacity: 0.6; 
+}
+
+.step-item.active::before {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #2d2d2d;
+}
+
+.step-item.upcoming::before {
+  background-color: #2d2d2d;
+  border: 2px solid #bbb;
+  color: #eee;
+}
+
+.step-item:hover {
+    background-color: gray;
+}
+
+.step-navigation {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+.step-navigation button {
+    padding: 0.75em 1.25em;
+    font-size: 1em;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.step-navigation button:hover {
+    background-color: #0056b3;
+}
+
+.menu-button {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu-button:hover {
+  background-color: #45a049;
+}

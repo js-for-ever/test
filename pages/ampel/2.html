@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Karte - Knöpfe</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/sidebar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="tutorial-intro">
+            <div class="text-section">
+                <h1>Knöpfe in der Ampelschaltung</h1>
+                <p>
+                    In diesem Abschnitt erweitern wir unsere Ampelschaltung um einen Knopf, der für Fußgänger genutzt wird. 
+                    Zuerst lernen wir, wie man einen Knopf richtig anschließt und später im Code abfragt, ob er gedrückt wurde.
+                </p>
+            </div>
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Öffne Tinkercad in einem neuen Fenster und erstelle ein neues Projekt, um den Knopf auszuprobieren.
+            </p>
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Ziehe einen <strong>Drucktaster</strong> (Knopf) aus der Komponentenliste und platziere ihn mittig auf das Steckbrett (über die mittlere Lücke hinweg).
+            </p>
+            <img src="../../assets/ampel/img_3.png" alt="Arduino Projekt" class="tutorial-image" width="100" />
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Verbinde den <strong>GND-Pin</strong> des Arduinos mit der blauen Minus-Schiene auf dem Steckbrett.
+            </p>
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Verbinde nun die Minus-Schiene mit dem linken Bein des Knopfes.
+            </p>
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Schließe ein weiteres Kabel an das rechte Bein des Knopfes an und verbinde es mit Pin 7 am Arduino.<br><br>
+                So sollte es nun aussehen:
+            </p>
+            <img src="../../assets/ampel/img_4.png" alt="Arduino Projekt" class="tutorial-image" width="400" />
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Um später im Code abzufragen, ob der Knopf gedrückt wurde, müssen wir im Setup den verwendeten Pin auf "INPUT" setzen. Dies stellt sicher, dass der Arduino den Zustand des Pins lesen kann.
+            </p>
+            <img src="../../assets/ampel/img_5.png" alt="Arduino Projekt" class="tutorial-image" width="300" />
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Nun kannst du mit dem Block „Digitalen Anschluss lesen“ prüfen, ob der Knopf Strom bekommt.<br><br> 
+                Mit dem grünen Vergleichsblock „=“ kannst du dann überprüfen, ob der Wert des Pins „niedrig“ ist. Dies ist der Moment, in dem der Knopf gedrückt wird.
+            </p>
+            <img src="../../assets/ampel/img_6.png" alt="Arduino Projekt" class="tutorial-image" width="400" />
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Momentan haben wir noch keine Aktion, die der Knopf auslösen kann. Füge deshalb eine <strong>LED</strong> an einem Pin deiner Wahl hinzu.
+            </p>
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Nun kannst du im „Für immer“-Block einen „Wenn, dann, sonst“-Block einfügen.<br><br>
+                Damit kannst du eine Aktion ausführen, wenn der Knopf gedrückt wird (der Pin auf „niedrig“ ist). Ein Beispiel: Die LED leuchtet, wenn der Knopf gedrückt wird, und geht aus, wenn er losgelassen wird.
+            </p>
+            <img src="../../assets/ampel/img_7.png" alt="Arduino Projekt" class="tutorial-image" width="400" />
+        </div>
+
+        <div class="check-card">
+            <div class="checkmark"><input type="checkbox" class="check-toggle" /></div>
+            <p class="check-description">
+                Baue den Code so, dass die Lampe leuchtet, wenn der Knopf gedrückt wird – und ausgeht, wenn er losgelassen wird.<br><br>
+                Teste danach deinen Code und überprüfe, ob alles funktioniert. Wenn es nicht klappt, frage nach Hilfe.
+            </p>
+        </div>
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.check-toggle');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const card = checkbox.closest('.check-card');
+                card.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
+
+    <script src="../../sidebar.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+        sidebar.init(2);
+    </script>
+</body>
+
+</html>
